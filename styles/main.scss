@@ -1,3 +1,45 @@
+@mixin flex($jc, $ai) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: column;
+}
+
+@mixin footerMobile() {
+  // @mixin
+  .footer-last {
+    .footer-bottom {
+      @include flex(center, center);
+      &__left {
+        display: flex;
+        flex-direction: column;
+        &--logo {
+          margin: 0;
+
+          margin-bottom: 24px;
+        }
+        p {
+          text-align: center;
+          margin-bottom: 40px;
+        }
+      }
+      &__right {
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--meseng {
+          margin-bottom: 16px;
+          display: flex;
+          justify-content: center;
+          .footer-bottom__right--a3.xx {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +61,52 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    // overflow: hidden;
   }
+}
+
+.mobil-menu {
+  width: 225px;
+  height: 665px;
+  background: #2c6269;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  & a {
+    display: inline-block;
+    color: #fff;
+    padding-left: 50px;
+  }
+  &__img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    margin-left: 75px;
+  }
+  & a:first-child {
+    display: flex;
+    justify-content: flex-end;
+    padding: 25px;
+  }
+  .contact {
+    padding: 10px 33px;
+    border: 2px solid #dedede;
+    width: 70px;
+    border-radius: 25px;
+    margin: 0 auto;
+    &:hover {
+      color: #0f0f0f;
+      background: #fff;
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+  display: none;
 }
 
 .header {
@@ -106,9 +193,9 @@ body {
         color: #ffffff;
       }
       .midl__p1 {
-        width: 730px;
       }
       p {
+        max-width: 730px;
         font-family: Livvic;
         font-style: normal;
         font-weight: 600;
@@ -136,6 +223,9 @@ body {
   &__img {
     display: flex;
     justify-content: flex-end;
+  }
+  &__img2 {
+    display: none;
   }
 }
 
@@ -489,7 +579,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    a {
+    span {
       background: #012f34;
       width: 350px;
       height: 253px;
@@ -525,7 +615,7 @@ body {
         margin-bottom: 30px;
         color: #ffffff;
       }
-      span {
+      a {
         padding: 10px 20px;
         background: #f67e7e;
         font-family: Livvic;
@@ -620,6 +710,14 @@ body {
     top: 0;
     width: 200px;
     height: 200px;
+  }
+  &__first-img2 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    display: none;
   }
   h1 {
     font-family: Livvic;
@@ -761,7 +859,7 @@ body {
   padding-top: 120px;
   display: flex;
   flex-direction: column;
-  
+
   &__int {
     // display: none;
     outline: none;
@@ -800,6 +898,15 @@ body {
     overflow: hidden;
   }
 
+  .mobil-menu {
+    &.open {
+      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  }
+
   .header {
     &__inner {
       &--top {
@@ -807,6 +914,9 @@ body {
         margin: 0;
 
         .top__left {
+          .home1 {
+            display: none;
+          }
           a {
             padding: 0px 4px 0 15px;
             margin: 0;
@@ -842,6 +952,18 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
+        h2 {
+          font-family: Livvic;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 40px;
+          line-height: 40px;
+          /* identical to box height, or 100% */
+
+          text-align: center;
+
+          color: #ffffff;
+        }
         h1 {
           font-family: Livvic;
           font-style: normal;
@@ -854,14 +976,14 @@ body {
 
           color: #ffffff;
 
-        
           &::before {
             display: none;
           }
           margin-bottom: 24px;
         }
-        p {
+        .midl__p1 {
           text-align: center;
+          width: 327px;
           &:before {
             display: none;
           }
@@ -871,6 +993,14 @@ body {
         display: flex;
         justify-content: center;
       }
+    }
+    &__img {
+      display: none;
+    }
+    &__img2 {
+      display: block;
+      display: flex;
+      justify-content: flex-end;
     }
   }
 
@@ -1015,36 +1145,72 @@ body {
     }
   }
 
-  .footer-last {
-    .footer-bottom {
+  .section11 {
+    &__first-img {
+
+    }
+    &__inner {
       display: flex;
       flex-direction: column;
-      &__left {
-        display: flex;
-        flex-direction: column;
-        &--logo {
-          margin: 0;
-          
-          margin-bottom: 24px;
-        }
-        p {
-          text-align: center;
-          margin-bottom: 40px;
-        }
-      }
-      &__right {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        &--meseng {
-          margin-bottom: 16px;
-          .footer-bottom__right--a3 {
-            margin: 0;
-          }
-        }
+      align-items: center;
+      justify-content: center;
 
-       
+    }
+
+  }
+
+  .section12 {
+    &__first-img {
+      display: none;
+
+    }
+    &__first-img2 {
+      display: block;
+    }
+    h1 {
+
+    }
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      &--text {
+        margin-bottom: 56px;
       }
     }
   }
+
+  @include footerMobile;
+  // @import "./media";
 }
+// .footer-last {
+//   .footer-bottom {
+//     display: flex;
+//     flex-direction: column;
+//     &__left {
+//       display: flex;
+//       flex-direction: column;
+//       &--logo {
+//         margin: 0;
+
+//         margin-bottom: 24px;
+//       }
+//       p {
+//         text-align: center;
+//         margin-bottom: 40px;
+//       }
+//     }
+//     &__right {
+//       display: flex;
+//       flex-direction: column;
+//       align-items: center;
+//       &--meseng {
+//         margin-bottom: 16px;
+//         .footer-bottom__right--a3 {
+//           margin: 0;
+//         }
+//       }
+//     }
+//   }
+// }
