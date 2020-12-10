@@ -887,6 +887,13 @@ body {
     border: none;
   }
 }
+.header__img {
+  
+  &--img2 {
+    display: none;
+
+  }
+}
 
 @media screen and (max-width: 576px) {
   .container {
@@ -1146,30 +1153,23 @@ body {
   }
 
   .section11 {
-    &__first-img {
-
-    }
+   
     &__inner {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-
     }
-
   }
 
   .section12 {
     &__first-img {
       display: none;
-
     }
     &__first-img2 {
       display: block;
     }
-    h1 {
-
-    }
+    
     &__inner {
       display: flex;
       flex-direction: column;
@@ -1181,9 +1181,92 @@ body {
     }
   }
 
+  .main {
+    display: flex;
+    flex-direction: column;
+    &__left {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      h1 {
+        &:before {
+          display: none;
+        }
+      }
+      a {
+        margin: 0;
+        width: 232px;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+    }
+    .form {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .form__int {
+        width: 325px;
+      }
+      .form__tra {
+        width: 325px;
+      }
+      .form__btn {
+        // display: flex;
+        // align-self: flex-start;
+        text-align: center;
+        text-align: center;
+        display: flex;
+        align-self: end;
+        padding-left: 40px;
+        padding-top: 15px;
+        margin-left: 90px;
+      }
+    }
+  }
+
+  .header__img {
+    display: block;
+    display: flex;
+    justify-content: flex-end;
+    &--img1{
+      display: none;
+    }
+    &--img2 {
+      display: block;
+    }
+  }
+
   @include footerMobile;
   // @import "./media";
 }
+
+
+
+
+
+@media screen and (max-width: 922px) {
+
+
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+
+
+
+
+
+
+
+
 // .footer-last {
 //   .footer-bottom {
 //     display: flex;

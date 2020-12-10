@@ -8,20 +8,41 @@
     <title>Document</title>
   </head>
   <body>
+
+
+
+    <div class="mobil-menu">
+      <a href="javascript:void(0)" id="close" ><img src="./images/icons/Groupxxx.svg" alt=""></a>
+      <a href="./index.html">home</a>
+      <a href="./index2.html">about</a>
+      <a href="./index3.html" class="contact">contact us</a>
+      <img class="mobil-menu__img" src="./images/icons/Group 8.png" alt="">
+
+    </div>
+
+
+
+
+
+
+
+
     <header class="header">
       <div class="header__inner container">
         <div class="header__inner--top">
           <div class="top__left">
             <a href="#"><img src="./images/myteamlogo.svg" alt="" /></a>
             <a href="" class="home1">home</a>
-            <a href="#" class="about1">about</a>
+            <a href="#" class="home1">about</a>
           </div>
           <div class="top__right">
             <a href="#" class="footer-top__inner--a2 btn btn1">contact us</a>
+            <a href="javascript:void(0)" id="mobil" class="mobail-img"
+              ><img src="./images/icons/Group 2.svg" alt=""
+            /></a>
           </div>
         </div>
       </div>
-      
 
       <main class="main container">
         <div class="main__left">
@@ -37,28 +58,65 @@
         </div>
         <form action="./index4.html" class="form">
           <!-- <label for="name" class="form__lab">your name</label> -->
-          <input type="text" class="form__int" placeholder="your name" id="name" />
+          <input
+            type="text"
+            class="form__int"
+            placeholder="your name"
+            id="name"
+            required
+          />
 
           <!-- <label for="email1" class="form__lab">Email Address</label> -->
-          <input type="email" name="email1" placeholder="Email Address" class="form__int" id="email1" />
+          <input
+            type="email"
+            name="email1"
+            placeholder="Email Address"
+            class="form__int"
+            id="email1"
+            required
+          />
 
           <!-- <label for="company" class="form__lab">Company Name</label> -->
-          <input type="text" name="text" class="form__int" placeholder="Company Name" id="company" />
+          <input
+            type="text"
+            name="text"
+            class="form__int"
+            placeholder="Company Name"
+            id="company"
+            required
+          />
 
           <!-- <label for="title" class="form__lab">Title</label> -->
-          <input type="text" name="text" class="form__int" placeholder="Title" id="title" />
+          <input
+            type="text"
+            name="text"
+            class="form__int"
+            placeholder="Title"
+            id="title"
+            required
+          />
 
           <!-- <label for="massage" class="form__lab">Message</label> -->
           <!-- <input type="text" name="" class="form__int" placeholder="Message" id="massage" /> -->
-          <textarea name="text" id="text" class="form__tra" placeholder="Message" cols="30" rows="10"></textarea>
+          <textarea
+            name="text"
+            id="text"
+            class="form__tra"
+            placeholder="Message"
+            cols="30"
+            rows="10"
+            required
+          ></textarea>
 
           <button type="submit" class="form__btn">submit</button>
         </form>
       </main>
 
       <div class="header__img">
-        <img src="./images/icons/Group 77.png" alt="" />
+        <img class="header__img--img1" src="./images/icons/Group 77.png" alt="" />
+        <img class="header__img--img2" src="./images/icons/Group 7.png" alt="img">
       </div>
+
     </header>
 
     <div class="footer-last">
@@ -82,18 +140,21 @@
         </div>
 
         <div class="footer-bottom__right">
-          <a href="#" class="footer-bottom__right--a3 xx"
-            ><img src="./images/facebok.svg" alt=""
-          /></a>
-          <a href="#" class="footer-bottom__right--a3"
-            ><img src="./images/Path.svg" alt=""
-          /></a>
-          <a href="#" class="footer-bottom__right--a3 ss"
-            ><img src="./images/tvitter.svg" alt=""
-          /></a>
+          <div class="footer-bottom__right--meseng">
+            <a href="#" class="footer-bottom__right--a3 xx"
+              ><img src="./images/facebok.svg" alt=""
+            /></a>
+            <a href="#" class="footer-bottom__right--a3"
+              ><img src="./images/Path.svg" alt=""
+            /></a>
+            <a href="#" class="footer-bottom__right--a3 ss"
+              ><img src="./images/tvitter.svg" alt=""
+            /></a>
+          </div>
           <p>Copyright 2020. All Rights Reserved</p>
         </div>
       </div>
     </div>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>
