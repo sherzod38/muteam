@@ -595,6 +595,9 @@ body {
       flex-direction: column;
       align-items: center;
       margin-bottom: 76px;
+      // overflow: hidden;
+      
+
 
       .first-img {
         padding-top: 30px;
@@ -676,19 +679,11 @@ body {
         img {
           margin: 0;
           padding: 0;
-          // margin-bottom: 60px;
+          
         }
       }
       .section11__inner--last-span {
-        // padding: 10px 20px;
-        // background: #79c8c7;
-        // font-family: Livvic;
-        // font-style: normal;
-        // font-weight: 900;
-        // font-size: 25px;
-        // line-height: 25px;
-        // border-radius: 100%;
-        // color: #012f34;
+        
         &:active {
           background: #dedede;
         }
@@ -699,6 +694,16 @@ body {
     display: flex;
     justify-content: flex-end;
   }
+}
+.span__inner {
+  display: none;
+  transition: all ease 1.9s;
+
+}
+
+.span__inner.oven {
+  display: block;
+  transition: all ease 1.9s;
 }
 
 .section12 {
@@ -1282,6 +1287,10 @@ body {
 
       span {
         width: 327px;
+        .span__ineer {
+          // display: none;
+
+        }
       }
     }
     

@@ -806,6 +806,18 @@ body .container {
           justify-content: flex-end;
 }
 
+.span__inner {
+  display: none;
+  -webkit-transition: all ease 1.9s;
+  transition: all ease 1.9s;
+}
+
+.span__inner.oven {
+  display: block;
+  -webkit-transition: all ease 1.9s;
+  transition: all ease 1.9s;
+}
+
 .section12 {
   background: #012f34;
   position: relative;
