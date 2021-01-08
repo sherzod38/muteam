@@ -703,7 +703,12 @@ body {
 
 .span__inner.oven {
   display: block;
+  height: 400px;
   transition: all ease 1.9s;
+  
+}
+.first-img.oven1 {
+  display: none;
 }
 
 .section12 {

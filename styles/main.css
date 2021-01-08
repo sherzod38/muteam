@@ -814,8 +814,13 @@ body .container {
 
 .span__inner.oven {
   display: block;
+  height: 400px;
   -webkit-transition: all ease 1.9s;
   transition: all ease 1.9s;
+}
+
+.first-img.oven1 {
+  display: none;
 }
 
 .section12 {
